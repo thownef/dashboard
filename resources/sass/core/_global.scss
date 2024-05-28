@@ -1,0 +1,94 @@
+html, body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #6f6f6f;
+    font-size: 1rem;
+}
+
+.default-layout {
+    background-color: #ECECEC;
+
+    .main-content {
+        max-width: 1350px;
+        margin: 0 auto;
+    }
+
+    .table {
+        tr {
+            th {
+                background-color: #48B479;
+                color: #ffffff;
+                font-weight: 700;
+                white-space: nowrap;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            td {
+                color: #6f6f6f;
+            }
+        }
+
+        .no-data {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.main_fields {
+	background-color: #ffffff;
+	margin: 0px 20px;
+}
+
+.sorting {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+
+    &:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    &::before, &::after {
+        font-family: 'Font Awesome 6 Free';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        font-size: 14px;
+        opacity: .3;
+        font-weight: 900;
+    }
+
+    &::before {
+        content: "\f0d7";
+        right: 10px;
+        padding-bottom: 2px;
+
+    }
+
+    &::after {
+        content: "\f0d8";
+        right: 0;
+        padding-top: 2px;
+    }
+
+    &.sorting_asc {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &.sorting_desc {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
