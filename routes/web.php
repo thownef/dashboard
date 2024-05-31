@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Api\ResetPasswordController;
 use App\Http\Controllers\CompanyProfileController;
 use App\Http\Controllers\HomeController;
@@ -26,5 +27,6 @@ Route::get('reset-password/{token}', [ResetPasswordController::class, 'showReset
 Route::post('reset-password', [ResetPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 Route::group(['middleware' => 'auth'], function () {
+	Route::resource('account', AccountController::class);
 	Route::resource('company', CompanyProfileController::class);
 });

@@ -37,7 +37,7 @@ class Company extends Model
     }
     public function translate()
     {
-        return $this->hasMany(TCompany::class, "company_id");
+        return $this->hasMany(TCompany::class);
     }
 }
 

@@ -14,12 +14,9 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Scripts -->
-    @vite([
-        'resources/sass/app.scss',
-        'resources/js/app.js'
-    ])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body class="default-layout">
@@ -34,8 +31,6 @@
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                @include("includes.navbar")
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -77,15 +72,7 @@
         </nav>
 
         <main class="main-content py-4">
-            <div class="container-fluid">
-                <h6 class="title-page">@yield('page-header')</h6>
-
-                <div class="card">
-                    <div class="card-body">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
+            @yield('content')
         </main>
     </div>
 </body>
