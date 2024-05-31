@@ -1,0 +1,29 @@
+.default-layout {
+    .table {
+        --bs-table-bg: #ffffff;
+        tr {
+            th {
+                background-color: #48B479;
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 700;
+                white-space: nowrap;
+                vertical-align: middle;
+            }
+
+            td {
+                color: #6f6f6f;
+            }
+        }
+
+        .no-data {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+    }
+}

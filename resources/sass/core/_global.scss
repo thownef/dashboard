@@ -12,32 +12,25 @@ html, body {
         margin: 0 auto;
     }
 
-    .table {
-        tr {
-            th {
-                background-color: #48B479;
-                color: #ffffff;
-                font-weight: 700;
-                white-space: nowrap;
-                text-align: center;
-                vertical-align: middle;
-            }
-
-            td {
-                color: #6f6f6f;
-            }
-        }
-
-        .no-data {
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 700;
-
-            i {
-                margin-right: 4px;
-            }
-        }
+    .card {
+        background-color: #fff;
     }
+
+    .title-page {
+        font-size: 14px;
+        font-weight: 700;
+        color: #8e8e8e;
+        margin-bottom: 20px;
+    }
+
+    .btn-group--center {
+        display: flex;
+        justify-content: center;
+        .btn {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 122px;
+    }}
 }
 
 .main_fields {
@@ -45,11 +38,16 @@ html, body {
 	margin: 0px 20px;
 }
 
+.navbar-nav .nav-link.active, .nav-link:hover {
+    color: #ffffff;
+}
+
 .sorting {
     display: block;
     position: relative;
-    cursor: pointer;
+    text-decoration: none;
     color: #ffffff;
+    cursor: pointer;
 
     &:hover {
         color: #ffffff;
